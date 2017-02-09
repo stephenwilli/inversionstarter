@@ -21,27 +21,4 @@
     <? wp_head(); ?>
   </head>
 
-  <body>
-
-      <div class="top">
-        <a href="<?= get_bloginfo('url'); ?>">
-          <div class="logo"></div>
-        </a>
-        <button class="hamburger--squeeze" id="hamburger" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
-        <nav id="nav_main" class="hiddenmobile">
-          <ul>
-          <? $frontPageID = get_option('page_on_front') ?>
-          <? wp_list_pages([
-      				'depth' => 1,
-      				'sort_column' => 'menu_order',
-      				'title_li' => '',
-      				'exclude' => $frontPageID
-      			]);
-          ?>
-          </ul>
-        </nav>
-      </div>
+<body id="page-top">
