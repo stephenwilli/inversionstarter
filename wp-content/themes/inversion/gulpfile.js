@@ -84,7 +84,10 @@ var paths = {
       // 'bower_components/jquery.stellar/jquery.stellar.js',
 
       // Lazy Load Assets unveil
-      'bower_components/jquery-unveil/jquery.unveil.js'
+      'bower_components/jquery-unveil/jquery.unveil.js',
+
+            // SCROLL REVEAL
+      'bower_components/scrollreveal/dist/scrollreveal.js'
     ],
     appScripts: [
       // You can keep your JS tidy in its own file for a specific feature.
@@ -170,7 +173,7 @@ gulp.task('javascript', function() {
 // actions: minify, rename
 // to:      dist/images
 gulp.task('images',  function() {
-  gulp.src('assets/images/*.*')
+  gulp.src('assets/images/**')
     .pipe(imagemin())
     .pipe(gulp.dest('dist/images'))
     .pipe(browserSync.stream());
@@ -179,7 +182,7 @@ gulp.task('images',  function() {
 /* CLEAN
 /------------------------*/
 // empty dist folder
-gulp.task('clean', require('del').bind(null, ['dist/*']));
+gulp.task('clean', require('del').bind(null, ['dist/**']));
 
 /* WATCH
 /------------------------*/
@@ -188,7 +191,7 @@ gulp.task('clean', require('del').bind(null, ['dist/*']));
 gulp.task('watch',  ['browsersync'], function() {
   gulp.watch('assets/styles/*.scss', ['css']);
   gulp.watch('assets/scripts/*.js', ['javascript']);
-  gulp.watch('assets/images/*.*', ['images']);
+  gulp.watch('assets/images/**', ['images']);
   gulp.watch('*.php', browserSync.reload);
   gulp.watch('*.html', browserSync.reload);
 });
