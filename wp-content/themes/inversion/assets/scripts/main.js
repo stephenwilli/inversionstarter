@@ -1,17 +1,5 @@
-/**
- * All sorts javascript/jQuery functions go here
- *
- * @author      Flurin Dürst
- * @version     3.1
- * @since       WPSeed 0.12
- *
- */
 
-
-/* Functions
-/===================================================== */
 (function($) {
-    "use strict"; // Start of use strict
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
