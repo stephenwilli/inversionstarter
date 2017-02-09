@@ -135,6 +135,9 @@ gulp.task('css', function() {
   .pipe(browserSync.stream());
 });
 
+
+/* VENDORS
+/------------------------*/
 gulp.task('vendor', function(){
     return gulp.src(paths.vendorScripts)
       .pipe(plumber({errorHandler: notify.onError("<%= error.message %>")}))
@@ -193,4 +196,4 @@ gulp.task('watch',  ['browsersync'], function() {
 /* DEFAULT
 /------------------------*/
 // default gulp tasks executed with `gulp`
-gulp.task('default', ['clean', 'css', 'vendor', 'javascript', 'images']);
+gulp.task('default', ['clean', 'css', 'vendor', 'javascript', 'images', 'watch']);
