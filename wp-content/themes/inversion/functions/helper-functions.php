@@ -1,16 +1,4 @@
 <?php
-/**
- * Functions used for development purposes
- *
- * @author      Flurin Dürst
- * @version     1.4
- * @since       WPegg 0.1.0
- *
- */
-
-
- /* CODING TOOLKIT
- /===================================================== */
 
   /* DUMP'N DIE
   /------------------------*/
@@ -93,5 +81,3 @@
     return ' <span class="readmore"><a href="' . get_permalink() . '">[mehr...]</a>';
     // to hide the button use `return;`
   }
-
-?>
