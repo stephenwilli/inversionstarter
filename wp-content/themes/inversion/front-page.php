@@ -1,7 +1,5 @@
 <?php get_header();?>
 
-<?php get_template_part('partials/header/navigation'); ?>
-
     <header>
         <div class="header-content">
             <div class="header-content-inner">

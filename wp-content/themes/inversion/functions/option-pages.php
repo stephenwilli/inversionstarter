@@ -28,13 +28,20 @@ if( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'manage_options'
 	));
 
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Tracking Codes',
+		'menu_title'	=> 'Tracking Codes',
+		'parent_slug'	=> 'theme-settings',
+		'capability'	=> 'manage_options'
+	));
+
 }
 
 // SUB PAGES
 
 function my_acf_options_page_settings( $settings ) {
 	 $settings['title'] = 'Theme Settings';
-	 $settings['pages'] = array('Header', 'Sidebar', 'Footer');
+	 $settings['pages'] = array('Header', 'Sidebar', 'Footer', 'Tracking');
 
 	 return $settings;
 }
